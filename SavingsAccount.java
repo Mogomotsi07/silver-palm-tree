@@ -6,4 +6,5 @@ public class SavingsAccount extends Account {
         double interest = balance * RATE;
         if (interest > 0) deposit(interest);
     }
+    
 }

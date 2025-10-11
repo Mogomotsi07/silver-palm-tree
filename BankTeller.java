@@ -14,4 +14,5 @@ public class BankTeller implements Serializable {
     public String getUsername() { return username; }
     public String getPassword() { return password; }
     public String getName()     { return name; }
+    
 }

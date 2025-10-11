@@ -13,4 +13,5 @@ public class CompanyCustomer extends Customer {
         this.contactPerson = contact;
         this.companyType = type;
     }
+    
 }

@@ -68,4 +68,5 @@ public class BankingSystem implements Serializable {
         customerAccounts.values().forEach(list -> list.forEach(Account::applyInterest));
         System.out.println("Monthly interest applied to all eligible accounts.");
     }
+    
 }
