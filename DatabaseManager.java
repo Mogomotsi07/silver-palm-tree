@@ -7,7 +7,7 @@ public class DatabaseManager {
     public static BankingSystem loadData() {
         if (Files.notExists(FILE)) {
             BankingSystem system = new BankingSystem();
-            // seed one teller for first run
+            // teller name and pass
             system.addTeller(new BankTeller("Spojah", "password123", "Mogomotsi Vunika"));
             return system;
         }

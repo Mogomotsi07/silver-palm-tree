@@ -10,4 +10,5 @@ public class IndividualCustomer extends Customer {
         this.idNumber = idNumber;
         this.dateOfBirth = dob;
     }
+    
 }

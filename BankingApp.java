@@ -190,7 +190,7 @@ public class BankingApp {
             System.out.println("5. Apply Monthly Interest");
             System.out.println("0. Back");
             System.out.print("Select option: ");
-
+         
             switch (getIntInput()) {
                 case 1 -> createIndividualCustomer();
                 case 2 -> createCompanyCustomer();
@@ -358,4 +358,5 @@ public class BankingApp {
     public static void main(String[] args) {
         new BankingApp().start();
     }
+    
 }
