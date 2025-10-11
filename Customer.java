@@ -33,5 +33,4 @@ public abstract class Customer implements Serializable {
     public String toString() {
         return String.format("%s | %s | %s", id, name, email);
     }
-    
 }

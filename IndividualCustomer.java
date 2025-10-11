@@ -9,6 +9,5 @@ public class IndividualCustomer extends Customer {
         super(id, name, address, phone, email, user, pass);
         this.idNumber = idNumber;
         this.dateOfBirth = dob;
-    }
-    
+    } 
 }

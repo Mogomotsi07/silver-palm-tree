@@ -22,7 +22,6 @@ public abstract class Account implements Serializable {
         balance += amt;
         history.add("Deposit: +" + amt + " | Balance=" + balance);
     }
-    
     public boolean withdraw(double amt) {
         if (amt <= 0 || amt > balance) return false;
         balance -= amt;

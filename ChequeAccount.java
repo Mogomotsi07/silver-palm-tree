@@ -8,5 +8,4 @@ public class ChequeAccount extends Account {
     }
     @Override
     public void applyInterest() { /* none */ }
-    
 }

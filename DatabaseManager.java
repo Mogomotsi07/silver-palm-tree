@@ -7,7 +7,7 @@ public class DatabaseManager {
     public static BankingSystem loadData() {
         if (Files.notExists(FILE)) {
             BankingSystem system = new BankingSystem();
-            // teller name and pass
+            // teller details
             system.addTeller(new BankTeller("Spojah", "password123", "Mogomotsi Vunika"));
             return system;
         }
