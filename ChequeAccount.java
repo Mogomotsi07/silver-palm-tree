@@ -1,4 +1,4 @@
-public class ChequeAccount extends Account {
+public class ChequeAccount extends Account implements Withdrawable {
     private final String employer;
     private final String employerAddress;
 
@@ -6,7 +6,15 @@ public class ChequeAccount extends Account {
         this.employer = employer;
         this.employerAddress = employerAddress;
     }
+
     @Override
-    public void applyInterest() { /* none */ }
-    
+    public boolean withdraw(double amount) {
+        return super.withdraw(amount);
+    }
+
+    @Override
+    public void applyInterest() {
+
+    }
+    // no interest
 }

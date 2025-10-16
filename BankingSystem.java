@@ -48,7 +48,14 @@ public class BankingSystem implements Serializable {
 
         Account acc;
         switch (type) {
-            case "SAVINGS" -> acc = new SavingsAccount();
+            case "SAVINGS" -> {
+                if (initialDeposit < SavingsAccount.MIN_OPENING) {
+                    System.out.println("Savings account requires a minimum opening deposit of $"
+                            + SavingsAccount.MIN_OPENING);
+                    return null;
+                }
+                acc = new SavingsAccount();
+            }
             case "INVESTMENT" -> {
                 if (initialDeposit < 500) {
                     System.out.println("Investment account requires minimum $500.");

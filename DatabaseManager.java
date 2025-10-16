@@ -1,14 +1,14 @@
 import java.io.*;
 import java.nio.file.*;
 
-public class DatabaseManager {
-    private static final Path FILE = Paths.get("bankaura.ser");
+public final class DatabaseManager {
+
+    private static final Path FILE = Paths.get("bankaura.dat");
 
     public static BankingSystem loadData() {
         if (Files.notExists(FILE)) {
             BankingSystem system = new BankingSystem();
-            // teller details
-            system.addTeller(new BankTeller("Spojah", "password123", "Mogomotsi Vunika"));
+            system.addTeller(new BankTeller("Spojah", "password123", "Clutch Mandem"));
             return system;
         }
         try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(FILE))) {
@@ -26,5 +26,4 @@ public class DatabaseManager {
             System.out.println("Could not save data: " + e.getMessage());
         }
     }
-    
 }
