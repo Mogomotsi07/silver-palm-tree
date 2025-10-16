@@ -6,6 +6,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class LoginView {
     private final Stage stage;
     private final LoginController controller;
@@ -50,7 +52,7 @@ public class LoginView {
 
         Scene scene = new Scene(gp, 520, 380);
         scene.getStylesheets().add(
-                getClass().getResource("bankaura.css").toExternalForm());
+                Objects.requireNonNull(getClass().getResource("bankaura.css")).toExternalForm());
 
         stage.setTitle("Bank Aura – Login");
         stage.setScene(scene);
