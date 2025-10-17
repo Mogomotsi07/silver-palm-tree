@@ -18,7 +18,7 @@ public class BankingSystem implements Serializable {
         return (t != null && t.getPassword().equals(password)) ? t : null;
     }
 
-    /* ---------- customer ---------- */
+
     public boolean addCustomer(Customer c) {
         if (customers.containsKey(c.getUsername())) return false;
         customers.put(c.getUsername(), c);

@@ -21,7 +21,6 @@ public final class AlertUtil {
         alert.showAndWait();
     }
 
-    /* returns true if user clicked YES */
     public static boolean confirm(String message) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message, ButtonType.YES, ButtonType.NO);
         alert.setHeaderText(null);
@@ -29,7 +28,7 @@ public final class AlertUtil {
         return result.isPresent() && result.get() == ButtonType.YES;
     }
 
-    /* simple text input helper – returns null if cancelled */
+
     public static String askString(String title, String prompt) {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle(title);

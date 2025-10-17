@@ -11,7 +11,7 @@ public final class LoginController {
         this.system = system;
     }
 
-    /*  Called by LoginView  */
+
     public void handleLogin(String role, String user, String pass) {
         if (user.isEmpty() || pass.isEmpty()) {
             AlertUtil.error("Username / password required.");

@@ -16,7 +16,7 @@ public final class CustomerController {
         this.view = new CustomerMenuView(stage, this);
     }
 
-    /*  entry point from LoginController  */
+
     public void start() {
         view.setWelcome(customer.getName());
         refreshAccountList();
