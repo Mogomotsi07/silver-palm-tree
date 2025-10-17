@@ -14,7 +14,6 @@ public class Main extends Application {
         DatabaseManager.saveData(BankingSystemHolder.INSTANCE);
     }
 
-    /* simple singleton so stop() can reach the system */
     private static class BankingSystemHolder {
         static final BankingSystem INSTANCE = DatabaseManager.loadData();
     }
