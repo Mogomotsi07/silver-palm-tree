@@ -8,7 +8,6 @@ public final class AlertUtil {
 
     private AlertUtil() { }
 
-    /* ---------- ready-to-use alerts ---------- */
 
     public static void error(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR, message, ButtonType.OK);

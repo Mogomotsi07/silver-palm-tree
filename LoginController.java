@@ -36,7 +36,7 @@ public final class LoginController {
         }
     }
 
-    /*  Called by LoginView Exit button  */
+
     public void exit() {
         DatabaseManager.saveData(system);
         Platform.exit();

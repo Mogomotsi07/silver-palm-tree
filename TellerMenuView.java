@@ -1,9 +1,9 @@
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.util.List;
 
 public class TellerMenuView {
@@ -17,19 +17,20 @@ public class TellerMenuView {
     }
 
     public void show() {
-        VBox vb = new VBox(18);
-        vb.setPadding(new Insets(20));
+        VBox vb = new VBox(20);
+        vb.setPadding(new Insets(28));
         vb.getStyleClass().add("card");
+        vb.setAlignment(Pos.TOP_LEFT);
 
-        vb.getChildren().add(new Label("Customers:"));
-        vb.getChildren().add(customerLst);
+        Label cusLbl = new Label("Customers");
+        cusLbl.getStyleClass().add("field-label");
+        vb.getChildren().addAll(cusLbl, customerLst);
 
-        /* plain text buttons */
-        Button addIndBtn  = new Button("Add Individual Customer");
-        Button addCompBtn = new Button("Add Company Customer");
-        Button addAccBtn  = new Button("Create Account for Selected");
-        Button applyIntBtn= new Button("Apply Monthly Interest");
-        Button logoutBtn  = new Button("Logout");
+        Button addIndBtn   = new Button("Add Individual Customer");
+        Button addCompBtn  = new Button("Add Company Customer");
+        Button addAccBtn   = new Button("Create Account for Selected");
+        Button applyIntBtn = new Button("Apply Monthly Interest");
+        Button logoutBtn   = new Button("Logout");
 
         addIndBtn.setOnAction(e -> ctrl.addIndividual());
         addCompBtn.setOnAction(e -> ctrl.addCompany());
@@ -37,21 +38,18 @@ public class TellerMenuView {
         applyIntBtn.setOnAction(e -> ctrl.applyInterest());
         logoutBtn.setOnAction(e -> ctrl.logout());
 
-        vb.getChildren().addAll(addIndBtn, addCompBtn, addAccBtn, applyIntBtn, logoutBtn);
+        VBox btnCol = new VBox(10, addIndBtn, addCompBtn, addAccBtn, applyIntBtn, logoutBtn);
+        btnCol.getStyleClass().add("button-col");
+        vb.getChildren().add(btnCol);
 
-        Scene scene = new Scene(vb, 520, 480);
-        scene.getStylesheets().add(
-                getClass().getResource("bankaura.css").toExternalForm());
+        Scene scene = new Scene(vb, 560, 600);
+        scene.getStylesheets().add(getClass().getResource("bankaura.css").toExternalForm());
 
         stage.setTitle("Bank Aura – Teller");
         stage.setScene(scene);
     }
 
-    public void refreshCustomers(List<String> list) {
-        customerLst.getItems().setAll(list);
-    }
+    public void refreshCustomers(List<String> list) { customerLst.getItems().setAll(list); }
 
-    private int selectedCustomerIndex() {
-        return customerLst.getSelectionModel().getSelectedIndex();
-    }
+    private int selectedCustomerIndex() { return customerLst.getSelectionModel().getSelectedIndex(); }
 }

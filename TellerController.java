@@ -80,6 +80,7 @@ public class TellerController {
         } catch (NumberFormatException ex) {
             AlertUtil.error("Invalid amount.");
         }
+
     }
 
     public void applyInterest() {

@@ -26,4 +26,5 @@ public final class DatabaseManager {
             System.out.println("Could not save data: " + e.getMessage());
         }
     }
+
 }

@@ -34,4 +34,5 @@ public final class TransactionRow {
     public String getType()         { return type; }
     public double getAmount()       { return amount; }
     public double getBalanceAfter() { return balanceAfter; }
+
 }

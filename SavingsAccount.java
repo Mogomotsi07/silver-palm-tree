@@ -1,6 +1,6 @@
 public class SavingsAccount extends Account implements InterestBearing {
 
-    private static final double RATE = 0.00025;   // 0.025 % monthly
+    private static final double RATE = 0.00025;
     public  static final double MIN_OPENING = 50.0;
 
     /*  Block every withdraw attempt  */

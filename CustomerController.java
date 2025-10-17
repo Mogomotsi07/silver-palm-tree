@@ -7,7 +7,7 @@ public final class CustomerController {
     private final Stage stage;
     private final BankingSystem system;
     private final Customer customer;
-    private final CustomerMenuView view;   // embedded mini-history table
+    private final CustomerMenuView view;
 
     public CustomerController(Stage stage, BankingSystem system, Customer customer) {
         this.stage = stage;
@@ -23,7 +23,6 @@ public final class CustomerController {
         view.show();
     }
 
-    /*  ----------------  actions  ----------------  */
 
     public void deposit(int accountIndex) {
         List<Account> accounts = system.getCustomerAccounts(customer);
@@ -74,7 +73,6 @@ public final class CustomerController {
         new LoginView(stage, new LoginController(stage, system)).show();
     }
 
-    /*  ----------------  helpers  ----------------  */
 
     private boolean indexInvalid(int idx, List<?> list) {
         if (idx < 0 || idx >= list.size()) {

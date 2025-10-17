@@ -16,5 +16,5 @@ public class ChequeAccount extends Account implements Withdrawable {
     public void applyInterest() {
 
     }
-    // no interest
+
 }

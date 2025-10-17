@@ -11,4 +11,5 @@ public class InvestmentAccount extends Account implements Withdrawable, Interest
         double interest = getBalance() * RATE;
         if (interest > 0) deposit(interest);
     }
+
 }
