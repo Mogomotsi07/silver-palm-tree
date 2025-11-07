@@ -1,9 +1,11 @@
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public abstract class Account implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     private static int accCounter = 1000;
     private static final DateTimeFormatter FMT =
