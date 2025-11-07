@@ -1,0 +1,92 @@
+.root{
+    -fx-primary: rgb(50, 176, 218);
+    -fx-secondary: #26A69A;
+    -fx-gold: #FFD54F;
+    -fx-bg: #F5F5F5;
+    -fx-text: #212121;
+    -fx-success: #43A047;
+    -fx-error: #E53935;
+    -fx-base: #F5F5F5;
+    -fx-background: linear-gradient(to bottom, #F5F5F5 0%, #E0E0E0 100%);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+.region.root{
+    -fx-background-color: -fx-background;
+}
+.label{
+    -fx-text-fill: -fx-text;
+}
+.label.header{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+    -fx-padding: 0 0 20 0;
+}
+.button{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: transparent;
+    -fx-padding: 12 28 12 28;
+    -fx-cursor: hand;
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.08), 6, 0, 0, 3);
+    -fx-transition: all .2s;
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: -fx-secondary;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.15), 10, 0, 0, 5);
+    -fx-translate-y: -1;
+}
+.button:default{
+    -fx-background-color: -fx-gold;
+    -fx-text-fill: -fx-text;
+}
+.button:cancel{
+    -fx-background-color: #BDBDBD;
+    -fx-text-fill: -fx-text;
+}
+.card{
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,105,92,.10), 18, 0, 0, 8);
+    -fx-padding: 30;
+}
+.text-field, .password-field{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #80CBC4;
+    -fx-padding: 14;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #757575;
+}
+.text-field:focused, .password-field:focused{
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, -fx-primary, 8, 0, 0, 0);
+}
+.table-view, .list-view{
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #80CBC4;
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.90);
+}
+.table-cell, .list-cell{
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+.table-row-cell:selected, .list-cell:selected{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+.dialog-pane{
+    -fx-background-color: rgba(255,255,255,0.95);
+}
+.dialog-pane .header-panel{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
