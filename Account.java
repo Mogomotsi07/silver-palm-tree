@@ -5,13 +5,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public abstract class Account implements Serializable {
-    @Serial
     private static final long serialVersionUID = 1L;
     private static int accCounter = 1000;
     private static final DateTimeFormatter FMT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    protected final String accountNumber;
+    protected String accountNumber;   // removed 'final' so setter works
     protected double balance;
     protected final List<String> history = new ArrayList<>();
 
@@ -20,10 +19,14 @@ public abstract class Account implements Serializable {
         this.balance = 0;
     }
 
+    /* ===== GETTERS ===== */
     public String getAccountNumber() { return accountNumber; }
     public double getBalance()       { return balance; }
     public List<String> getHistory() { return history; }
     public String getBalanceText()   { return format(balance); }
+
+    /* ===== SETTER (NEW) ===== */
+    void setAccountNumber(String num) { this.accountNumber = num; }
 
     public void deposit(double amt) {
         if (amt <= 0) return;
